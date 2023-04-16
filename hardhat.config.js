@@ -9,4 +9,7 @@ module.exports = {
       chainId: 1337,
     },
   },
+  paths: {
+    artifacts: "./src/artifacts",
+  },
 };
