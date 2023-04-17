@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import Greet from "./artifacts/contracts/Greet.sol/Greet.json";
 
 const HARDHAT_CONTRACT_ADDRESS = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+const GOERLI_CONTRACT_ADDRESS = "0x5c07e49Fb1d23B42eE1630df5F40D06Ef7F802FD";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -16,7 +17,7 @@ function App() {
     if (typeof window.ethereum !== "undefined") {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(
-        HARDHAT_CONTRACT_ADDRESS,
+        GOERLI_CONTRACT_ADDRESS,
         Greet.abi,
         provider
       );
@@ -46,7 +47,7 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
-        HARDHAT_CONTRACT_ADDRESS,
+        GOERLI_CONTRACT_ADDRESS,
         Greet.abi,
         signer
       );
