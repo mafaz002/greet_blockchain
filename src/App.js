@@ -16,7 +16,7 @@ function App() {
     if (typeof window.ethereum !== "undefined") {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(
-        CONTRACT_ADDRESS,
+        HARDHAT_CONTRACT_ADDRESS,
         Greet.abi,
         provider
       );
